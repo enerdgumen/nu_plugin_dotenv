@@ -1,0 +1,13 @@
+[package]
+authors = ["Enerdgumen"]
+description = "A plugin for Nushell to read dotenv files"
+repository = "https://github.com/enerdgumen/nu_plugin_dotenv"
+edition = "2021"
+license = "MIT"
+name = "nu_plugin_dotenv"
+version = "0.1.0"
+
+[dependencies]
+dotenvy = "0.15.6"
+nu-plugin = "0.72.0"
+nu-protocol = { version = "0.72.0", features = ["plugin"]}
