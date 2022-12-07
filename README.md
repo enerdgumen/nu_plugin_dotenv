@@ -1,18 +1,20 @@
 # Dotenv plugin for Nushell
 
-Crate with a simple example of the Plugin trait that needs to be implemented
-in order to create a binary that can be registered into nushell declaration list
+Provides the `from dotenv` command, that parse a .env file.
+
+```
+open my.env | from dotenv
+```
 
 ## Install
 
-    # from local
-    cargo install --path . --root ~/.config/nushell/plugins
+It is not yet published on cargo, so install it manually:
+```sh
+cargo install --path . --root ~/.config/nushell/plugins
+```
 
-    # from git
-    cargo install --git https://github.com/enerdgumen/nu_plugin_dotenv
+Then register it in the nu config:
 
-    register "nu_plugin_dotenv"
-
-## Uninstall
-    
-    cargo uninstall nu_plugin_dotenv
+```nu
+register "~/.config/nushell/plugins/bin/nu_plugin_dotenv"
+```
