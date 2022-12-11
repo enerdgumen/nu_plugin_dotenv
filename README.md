@@ -2,7 +2,7 @@
 
 Provides the `from dotenv` command, that parse a .env file.
 
-```
+```nu
 open my.env | from dotenv
 ```
 
@@ -17,4 +17,12 @@ Then register it in the nu config:
 
 ```nu
 register "~/.config/nushell/plugins/bin/nu_plugin_dotenv"
+```
+
+## Alternatives
+
+You can achieve a similar result using [direnv](https://direnv.net):
+
+```nu
+direnv dotenv json my.env | from json
 ```
